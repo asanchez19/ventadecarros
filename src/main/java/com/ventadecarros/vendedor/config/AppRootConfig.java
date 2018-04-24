@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@PropertySource("classpath:db.properties")
+////@PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScans(value = {
         @ComponentScan("com.ventadecarros.vendedor.dao"),
@@ -38,10 +38,10 @@ public class AppRootConfig {
     @Bean
     public DataSource getDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName(env.getProperty("db.driver"));
-        dataSource.setUrl(env.getProperty("db.url"));
-        dataSource.setUsername(env.getProperty("db.username"));
-        dataSource.setPassword(env.getProperty("db.password"));
+        dataSource.setDriverClassName(env.getProperty("com.microsoft.sqlserver"));
+        dataSource.setUrl(env.getProperty("jdbc:sqlserver://JORDANI-PC:1433;databaseName=AUTOS"));
+        dataSource.setUsername(env.getProperty("GEN000"));
+        dataSource.setPassword(env.getProperty("GEN000"));
         return dataSource;
     }
 

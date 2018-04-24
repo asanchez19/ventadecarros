@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
  * @author jorda
  */
 @Repository
-public class MarcaDadoImp implements MarcaDao {
+public class MarcaDaoImp implements MarcaDao {
 
     @Autowired
     private SessionFactory sessionfactory;
