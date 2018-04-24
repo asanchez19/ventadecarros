@@ -9,7 +9,8 @@ package com.ventadecarros.vendedor.config;
  *
  * @author jorda
  */
-//import ac.cr.una.springwsrestful.model.User;
+
+import com.ventadecarros.vendedor.model.Marca;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
@@ -26,8 +27,8 @@ import java.util.Properties;
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScans(value = {
-        @ComponentScan("ac.cr.una.springwsrestful.dao"),
-        @ComponentScan("ac.cr.una.springwsrestful.service")
+        @ComponentScan("com.ventadecarros.vendedor.dao"),
+        @ComponentScan("com.ventadecarros.vendedor.service")
 })
 public class AppRootConfig {
 
@@ -54,7 +55,7 @@ public class AppRootConfig {
         props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 
         factoryBean.setHibernateProperties(props);
-//        factoryBean.setAnnotatedClasses(User.class);
+        factoryBean.setAnnotatedClasses(Marca.class);
         return factoryBean;
     }
 
