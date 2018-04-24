@@ -41,8 +41,7 @@ public class Marca {
         this.cod_marca = cod_marca;
     }
     
-    public Marca(Long id, String cod_marca, String dsc_marca) {
-        this.id = id;
+    public Marca(String cod_marca, String dsc_marca) {
         this.cod_marca = cod_marca;
         this.dsc_marca = dsc_marca;
     }
