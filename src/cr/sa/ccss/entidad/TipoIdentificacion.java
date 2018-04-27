@@ -1,16 +1,15 @@
 /**
  * -windowtitle Clase Tipo de Identificación
  */
-
 package cr.sa.ccss.entidad;
 
 /**
  *
  * @author csibajac
- * @version 1.0
- * 26/04/2018
+ * @version 1.0 26/04/2018
  */
 public class TipoIdentificacion {
+
     /**
      * Declara los Atributos como private
      */
@@ -19,7 +18,8 @@ public class TipoIdentificacion {
     private int nivel1;
     private int nivel2;
     private int nivel3;
-    private char  enuso; 
+    private char enuso;
+
     /**
      * Constructor vacio
      */
@@ -28,6 +28,7 @@ public class TipoIdentificacion {
 
     /**
      * Constructor con atributo de llave primaria
+     *
      * @param codigo se recibe el código del tipo de identificación
      */
     public TipoIdentificacion(String codigo) {
@@ -36,10 +37,16 @@ public class TipoIdentificacion {
 
     /**
      * Constructor con todos los atributos
+     *
      * @param codigo se recibe el código del tipo de identificación
      * @param descripcion se recibe la descripcion del tipo de identificación
      */
     public TipoIdentificacion(String codigo, String descripcion) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+    }
+
+    public TipoIdentificacion(String codigo, String descripcion, int nivel1, int nivel2, int nivel3, char enuso) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.nivel1 = nivel1;
@@ -50,6 +57,7 @@ public class TipoIdentificacion {
 
     /**
      * Función que recupera el codigo del tipo de identificación.
+     *
      * @return Devuelve un código.
      */
     public String getCodigo() {
@@ -58,6 +66,7 @@ public class TipoIdentificacion {
 
     /**
      * Método que actualiza el código del tipo de identificación.
+     *
      * @param codigo Recibe el valor del código.
      */
     public void setCodigo(String codigo) {
@@ -66,6 +75,7 @@ public class TipoIdentificacion {
 
     /**
      * Función que recupera la descripción del tipo de identificación.
+     *
      * @return Retorna la descripción.
      */
     public String getDescripcion() {
@@ -73,7 +83,9 @@ public class TipoIdentificacion {
     }
 
     /**
-     * Método que actualiza el valor de la descripción del tipo de identificación.
+     * Método que actualiza el valor de la descripción del tipo de
+     * identificación.
+     *
      * @param descripcion Recibe el valor de la descripción.
      */
     public void setDescripcion(String descripcion) {
